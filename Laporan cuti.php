@@ -1,4 +1,7 @@
-<?php require_once('koneksi.php'); ?>
+<?php 
+// PERUBAHAN RUDDY
+
+require_once('koneksi.php'); ?>
 <?php
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {

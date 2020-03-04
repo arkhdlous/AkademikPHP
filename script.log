@@ -1,0 +1,39 @@
+DIM DlgBody AS MESSAGE; 
+
+DIM DlgTitle AS MESSAGE; 
+
+DIM Style AS INTEGER; 
+
+DIM Result AS INTEGER;
+
+DlgBody = "have you entered the value TOTAL CHARGE with the correct data? Do you want input?"; 
+
+DlgTitle = "Confirm Input Value Charging Result"; 
+
+Style = 4 ; 
+
+IF $Hour == 8 AND $Minute == 10  AND $Second == 0 THEN
+
+OLE_CreateObject(%WS,"Wscript.Shell"); 
+
+result = %WS.Popup(DlgBody,1,DlgTitle,Style);
+ENDIF;
+
+IF $Hour == 8 AND $Minute == 11 AND $Second == 0 THEN
+
+OLE_CreateObject(%WS,"Wscript.Shell"); 
+
+result = %WS.Popup(DlgBody,1,DlgTitle,Style);
+ENDIF;
+
+IF $Hour == 8 AND $Minute == 12 AND $Second == 0 THEN
+
+OLE_CreateObject(%WS,"Wscript.Shell"); 
+
+result = %WS.Popup(DlgBody,1,DlgTitle,Style);
+ENDIF;
+
+
+
+IF result == 6 THEN Show "popup";
+ENDIF; 
